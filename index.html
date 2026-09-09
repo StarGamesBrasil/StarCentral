@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarHub Central</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0e8bb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header-content {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header-content h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .header-content h3 {
+            color: #555;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        /* Títulos das Categorias */
+        .category-title {
+            width: 100%;
+            max-width: 1000px;
+            text-align: left;
+            margin: 25px 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .category-title span {
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 3px solid;
+        }
+
+        .cat-multi span {
+            color: #2e7d32;
+            border-color: #2e7d32;
+        }
+
+
+        .cat-solo span {
+            color: #1565c0;
+            border-color: #1565c0;
+        }
+
+        .cat-app span {
+            color: #f57f17;
+            border-color: #f57f17;
+        }
+
+        /* Container de Cards */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Base do Card */
+        .card {
+            padding: 20px;
+            border-radius: 12px;
+            min-width: 200px;
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Estilos Exclusivos para Cada Jogo/App */
+
+        /* 1. Cidade Dorme: Tema Noturno/Mistério */
+        .card-cidade-dorme {
+            background: linear-gradient(135deg, #1e1e2f, #2d2b55);
+            border: 2px solid #6c5ce7;
+        }
+        .card-cidade-dorme a {
+            color: #a29bfe;
+        }
+
+        /* 2. Xadrez: Tema Clássico Preto e Branco */
+        .card-xadrez {
+            background: #ffffff;
+            border: 2px solid #2d3436;
+            background-image: radial-gradient(#dcdde1 15%, transparent 16%);
+            background-size: 15px 15px;
+        }
+        .card-xadrez a {
+            color: #2d3436;
+        }
+
+        /* 3. Fruit Game: Tema Tropical/Vibrante */
+        .card-fruit {
+            background: linear-gradient(135deg, #ff7675, #fab1a0);
+            border: 2px solid #d63031;
+        }
+        .card-fruit a {
+            color: #2d3436;
+        }
+
+        /* 4. Cup Ping Pong: Tema Esportivo/Neon */
+        .card-pong {
+            background: linear-gradient(135deg, #00b894, #55efc4);
+            border: 2px solid #006266;
+        }
+        .card-pong a {
+            color: #0a3d62;
+        }
+
+        /* 5. WhatsApp Game (StarBank): Tema Verde Mensagem/Moderno */
+        .card-starbank {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            border: 2px solid #075e54;
+        }
+        .card-starbank a {
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Discord Footer */
+        .discord-section {
+            margin-top: auto;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .discord-section h4 {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .discord-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #5865F2;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+
+        .discord-btn:hover {
+            background-color: #4752C4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-content">
+        <h1>Olá!</h1>
+        <h3>Seja bem-vindo(a) ao SCH (Star Central Hub).<br>Aqui você poderá jogar com seus amigos ou sozinho.</h3>
+    </div>
+
+    <!-- Categoria Multijogador -->
+    <h3 class="category-title cat-multi"><span>Multijogador</span></h3>
+    <div class="container">
+        <div class="card card-cidade-dorme">
+            <a href="https://stardormacidade.netlify.app" target="_blank">Cidade Dorme</a>
+        </div>
+        
+        <div class="card card-xadrez">
+            <a href="https://stargamesbrasil.github.io/Xadrezo/" target="_blank">Xadrez</a>
+        </div>
+    </div>
+
+    <!-- Categoria Solo -->
+    <h3 class="category-title cat-solo"><span>Solo</span></h3>
+    <div class="container">
+        <div class="card card-fruit">
+            <a href="https://stargamesbrasil.github.io/Fruit_Game/" target="_blank">Fruit Game</a>
+        </div>
+        
+        <div class="card card-pong">
+            <a href="https://stargamesbrasil.github.io/Cup_Pong/" target="_blank">Cup Ping Pong</a>
+        </div>
+    </div>
+
+    <!-- Categoria Apps -->
+    <h3 class="category-title cat-app"><span>Apps</span></h3>
+    <div class="container">
+        <div class="card card-starbank">
+            <a href="https://stargamesbrasil.github.io/StarBank/" target="_blank">Bank</a>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="discord-section">
+        <h4>Entre em nossa comunidade Discord</h4>
+        <a href="https://google.com" class="discord-btn" target="_blank">Acessar Discord</a>
+        
+        <p> &copy; Star Central Hub</p>
+    </div>
+    </footer>
+
+</body>
+</html>
